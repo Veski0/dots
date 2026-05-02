@@ -329,10 +329,10 @@ require("lazy").setup({
     end,
   },
 
-  ----- nvim-luxmotion --------------------------------------------------------
+  ----- whisk.nvim ------------------------------------------------------------
   ----- Animates all vim motions.
   {
-    "LuxVim/nvim-luxmotion",
+    "josstei/whisk.nvim",
     config = function()
       require("whisk").setup({
         cursor = {

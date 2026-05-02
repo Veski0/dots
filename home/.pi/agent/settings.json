@@ -1,78 +1,31 @@
 {
-  "lastChangelogVersion": "0.71.1",
+  "lastChangelogVersion": "0.72.0",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "low",
+  "theme": "light",
+  "enabledModels": [
+    "openai-codex/gpt-5.5",
+    "openai-codex/gpt-5.4-mini"
+  ],
+  "hideThinkingBlock": false,
   "packages": [
     "npm:pi-subagents",
-    {
-      "source": "npm:pi-intercom",
-      "extensions": []
-    },
-    "../../projects/pi-tiny-web"
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-intercom",
+    "git:github.com/Veski0/pi-tiny-web"
   ],
   "subagents": {
     "agentOverrides": {
-      "scout": {
-        "model": "openrouter/qwen/qwen3-coder:free",
-        "thinking": "off",
-        "fallbackModels": [
-          "openrouter/openrouter/free",
-          "openrouter/openai/gpt-oss-20b:free"
-        ]
+      "context-builder": {
+        "model": "openai-codex/gpt-5.4-mini"
       },
       "researcher": {
-        "model": "openrouter/openrouter/free",
-        "fallbackModels": [
-          "openrouter/openai/gpt-oss-120b:free",
-          "openrouter/minimax/minimax-m2.5:free"
-        ]
+        "model": "openai-codex/gpt-5.4-mini"
       },
-      "planner": {
-        "model": "openrouter/openai/gpt-oss-120b:free",
-        "fallbackModels": [
-          "openrouter/qwen/qwen3-coder:free",
-          "openrouter/openrouter/free"
-        ]
-      },
-      "worker": {
-        "model": "openrouter/qwen/qwen3-coder:free",
-        "thinking": "off",
-        "fallbackModels": [
-          "openrouter/openai/gpt-oss-120b:free",
-          "openrouter/openrouter/free"
-        ]
-      },
-      "reviewer": {
-        "model": "openrouter/openai/gpt-oss-120b:free",
-        "fallbackModels": [
-          "openrouter/qwen/qwen3-coder:free",
-          "openrouter/openrouter/free"
-        ]
-      },
-      "context-builder": {
-        "model": "openrouter/qwen/qwen3-coder:free",
-        "thinking": "off",
-        "fallbackModels": [
-          "openrouter/openai/gpt-oss-120b:free",
-          "openrouter/openrouter/free"
-        ]
-      },
-      "oracle": {
-        "model": "openrouter/openai/gpt-oss-120b:free",
-        "fallbackModels": [
-          "openrouter/qwen/qwen3-coder:free",
-          "openrouter/openrouter/free"
-        ]
-      },
-      "delegate": {
-        "model": "openrouter/openrouter/free",
-        "thinking": "off",
-        "fallbackModels": [
-          "openrouter/qwen/qwen3-coder:free",
-          "openrouter/openai/gpt-oss-20b:free"
-        ]
+      "scout": {
+        "model": "openai-codex/gpt-5.4-mini"
       }
     }
-  },
-  "theme": "light"
+  }
 }

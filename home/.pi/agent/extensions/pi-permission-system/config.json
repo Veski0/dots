@@ -1,0 +1,126 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-permission-system/main/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": true,
+  "yoloMode": false,
+  "piInfrastructureReadPaths": [],
+  "permission": {
+    "*": "ask",
+
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "**/.env": "deny",
+      "**/.env.*": "deny",
+      "**/.env.example": "allow",
+
+      "~/.ssh/*": "deny",
+      "~/.gnupg/*": "deny",
+      "~/.aws/credentials": "deny",
+      "~/.config/gh/hosts.yml": "deny",
+
+      "**/id_rsa": "deny",
+      "**/id_ed25519": "deny",
+      "**/*_rsa": "deny",
+      "**/*_ed25519": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/*.p12": "deny",
+      "**/*.pfx": "deny",
+
+      "**/node_modules/*": "allow",
+      "**/.git/*": "ask"
+    },
+
+    "read": "allow",
+    "find": "allow",
+    "grep": "allow",
+    "ls": "allow",
+    "write": "ask",
+    "edit": "ask",
+    "todo": "allow",
+    "ask_user_question": "allow",
+    "subagent": "ask",
+    "parallel": "ask",
+    "multi_tool_use.parallel": "ask",
+
+    "bash": {
+      "*": "ask",
+
+      "pwd": "allow",
+      "ls": "allow",
+      "ls *": "allow",
+      "find *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "cat *": "allow",
+      "sed -n *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "wc *": "allow",
+
+      "git status": "allow",
+      "git status *": "allow",
+      "git diff": "allow",
+      "git diff *": "allow",
+      "git log": "allow",
+      "git log *": "allow",
+      "git show": "allow",
+      "git show *": "allow",
+      "git branch": "allow",
+      "git branch *": "allow",
+
+      "npm test": "ask",
+      "npm run *": "ask",
+      "pnpm test": "ask",
+      "pnpm run *": "ask",
+      "yarn test": "ask",
+      "yarn run *": "ask",
+
+      "cargo test": "ask",
+      "go test *": "ask",
+      "python -m pytest*": "ask",
+      "pytest*": "ask",
+
+      "rm *": "ask",
+      "rm -r *": "ask",
+      "rm -rf *": "deny",
+      "rm -fr *": "deny",
+
+      "sudo *": "ask",
+      "su *": "deny",
+
+      "chmod *": "ask",
+      "chown *": "ask",
+
+      "mkfs*": "deny",
+      "dd *": "deny",
+
+      "mount *": "ask",
+      "umount *": "ask",
+
+      "curl * | sh*": "deny",
+      "curl * | bash*": "deny",
+      "wget * | sh*": "deny",
+      "wget * | bash*": "deny",
+
+      "ssh *": "ask",
+      "scp *": "ask",
+      "rsync *": "ask"
+    },
+
+    "mcp": {
+      "*": "ask",
+      "mcp_status": "allow",
+      "mcp_list": "allow"
+    },
+
+    "skill": {
+      "*": "ask"
+    },
+
+    "external_directory": "ask"
+  }
+}

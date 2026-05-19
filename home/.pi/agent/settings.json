@@ -1,9 +1,9 @@
 {
-  "lastChangelogVersion": "0.72.0",
+  "lastChangelogVersion": "0.75.3",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "low",
-  "theme": "light",
+  "defaultThinkingLevel": "medium",
+  "theme": "dark",
   "enabledModels": [
     "openai-codex/gpt-5.5",
     "openai-codex/gpt-5.4-mini"
@@ -12,8 +12,10 @@
   "packages": [
     "npm:pi-subagents",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-intercom",
-    "git:github.com/Veski0/pi-tiny-web"
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-powerline-footer",
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@narumitw/pi-codex-usage"
   ],
   "subagents": {
     "agentOverrides": {
@@ -27,5 +29,6 @@
         "model": "openai-codex/gpt-5.4-mini"
       }
     }
-  }
+  },
+  "powerline": "default"
 }

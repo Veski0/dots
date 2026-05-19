@@ -17,7 +17,8 @@ rm ~/dots/home/.config/nvim/lazy-lock.json
 cp ~/.tmux.conf ~/dots/home
 
 # Handle pi
-mkdir -p ~/dots/home/.pi/agent
+mkdir -p ~/dots/home/.pi/agent/extensions/pi-permission-system
 cp ~/.pi/agent/settings.json ~/dots/home/.pi/agent
+cp ~/.pi/agent/extensions/pi-permission-system/config.json ~/dots/home/.pi/agent/extensions/pi-permission-system/config.json
 
 echo "Dotfiles swept"

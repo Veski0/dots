@@ -96,3 +96,34 @@ for key, dir in pairs(directions) do
     silent = true,
   })
 end
+
+----- Tab Movement Improvements -----------------------------------------------
+-- Shifted Alt+h/j/k/l arrives in Neovim as Alt+H/J/K/L in most terminals.
+--
+--   <A-H> / <A-L> move between tabs
+--   <A-J> / <A-K> move the current tab left/right
+local tab_mappings = {
+  H = { command = "tabprevious", desc = "Go to previous tab" },
+  L = { command = "tabnext", desc = "Go to next tab" },
+  J = { command = "tabmove -1", desc = "Move tab left" },
+  K = { command = "tabmove +1", desc = "Move tab right" },
+}
+
+for key, mapping in pairs(tab_mappings) do
+  local command = "<cmd>" .. mapping.command .. "<CR>"
+
+  map("n", "<A-" .. key .. ">", command, {
+    desc = mapping.desc,
+    silent = true,
+  })
+
+  map("i", "<A-" .. key .. ">", "<C-\\><C-n>" .. command, {
+    desc = mapping.desc .. " from Insert mode",
+    silent = true,
+  })
+
+  map("t", "<A-" .. key .. ">", [[<C-\><C-n>]] .. command, {
+    desc = mapping.desc .. " from Terminal mode",
+    silent = true,
+  })
+end

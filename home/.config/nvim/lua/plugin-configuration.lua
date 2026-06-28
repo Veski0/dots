@@ -12,11 +12,11 @@ require("lazy").setup({
   --   lazy = false,
   --   config = function() vim.cmd("colorscheme tokyonight") end
   -- },
-  -- {
-  --   "neanias/everforest-nvim",
-  --   lazy = false,
-  --   config = function() vim.cmd("colorscheme everforest") end
-  -- },
+  {
+    "neanias/everforest-nvim",
+    lazy = false,
+    -- config = function() vim.cmd("colorscheme everforest") end
+  },
   {
     "projekt0n/github-nvim-theme",
     lazy = false,
@@ -27,11 +27,11 @@ require("lazy").setup({
   --   lazy = false,
   --   config = function() vim.cmd("colorscheme catppuccin-macchiato") end
   -- },
-  -- {
-  --   "sainnhe/gruvbox-material",
-  --   lazy = false,
-  --   config = function() vim.cmd("colorscheme gruvbox-material") end
-  -- },
+  {
+    "sainnhe/gruvbox-material",
+    lazy = false,
+    -- config = function() vim.cmd("colorscheme gruvbox-material") end
+  },
   -- {
   --   "rose-pine/neovim",
   --   name = "rose-pine",
@@ -42,11 +42,11 @@ require("lazy").setup({
   --   lazy = false,
   --   config = function() vim.cmd("colorscheme aura-theme") end
   -- },
-  -- {
-  --   "xero/miasma.nvim",
-  --   lazy = false,
-  --   config = function() vim.cmd("colorscheme miasma") end,
-  -- },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    -- config = function() vim.cmd("colorscheme miasma") end,
+  },
 
   ----- nvim-tree.lua ---------------------------------------------------------
   ----- IDE-style file explorer.

@@ -1,22 +1,22 @@
 {
-  "lastChangelogVersion": "0.75.3",
-  "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "medium",
-  "theme": "dark",
+  "defaultProvider": "openai-codex",
+  "defaultThinkingLevel": "xhigh",
   "enabledModels": [
     "openai-codex/gpt-5.5",
-    "openai-codex/gpt-5.4-mini"
+    "ollama-cloud/glm-5.2"
   ],
   "hideThinkingBlock": false,
+  "lastChangelogVersion": "0.80.2",
   "packages": [
-    "npm:pi-subagents",
-    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-ollama",
     "npm:@juicesharp/rpiv-todo",
     "npm:pi-powerline-footer",
-    "npm:@gotgenes/pi-permission-system",
-    "npm:@narumitw/pi-codex-usage"
+    "https://github.com/Veski0/pi-tiny-web.git",
+    "npm:pi-ollama-cloud-provider",
+    "https://github.com/Veski0/pi-ion.git"
   ],
+  "powerline": "full",
   "subagents": {
     "agentOverrides": {
       "context-builder": {
@@ -30,5 +30,10 @@
       }
     }
   },
-  "powerline": "default"
+  "theme": "dark",
+  "workingVibe": "file",
+  "workingVibeFallback": "Agenting...",
+  "workingVibeMaxLength": 65,
+  "workingVibeModel": "ollama/gemma4:e4b",
+  "workingVibeRefreshInterval": 240
 }
